@@ -1,6 +1,22 @@
-title: Mai Le
-logo: /assets/img/logo.jpg
-description: Experienced Analyst with a demonstrated history of working in the banking and transportation industry. Skilled in Microsoft Office, Tableau, and various programming languages. And, currently expanding my skillset as a graduate Business Analytics student at Temple University
+title: <p align="center"> Mai Le </p>
+
+logo: "/images/logo.img?raw=true"
+
+description:
+  <p align="center">
+  <a href="https://drive.google.com/file/d/1LrM_Krk0SWyMG9oljSf4jfzKLW2h1mlU/view?usp=sharing">Resume</a> |
+  <a href="https://www.linkedin.com/in/maip-le/">LinkedIn</a> |
+  <a href="https://public.tableau.com/app/profile/mai.phuong.le">Tableau</a>
+   <a href="https://github.com/maiphle">GitHub</a>
+  </p>
+  
+  <p align="justify">
+  I am pursing MS degree in Business Analytics at Fox School of Business, Temple University.
+  <br><br>
+  xx.
+  <br><br>
+  </p>
+  
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
