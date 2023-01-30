@@ -101,7 +101,9 @@ Data by [**Mark Bradbourne**](https://data.world/markbradbourne/rwfd-real-world-
     
 </div>
 <br>
-<div class='tableauPlaceholder' id='viz1673321537220' style='position: relative'><noscript><a href='#'><img alt='Final ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CallCenterDashboard_16710827929470&#47;Final&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CallCenterDashboard_16710827929470&#47;Final' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CallCenterDashboard_16710827929470&#47;Final&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object>
+
+<center><img src="images/Call Center Dashboard.png"/></center>
+
 </div>
 
 
@@ -113,13 +115,10 @@ Data by [**Mark Bradbourne**](https://data.world/markbradbourne/rwfd-real-world-
 
 <div style="text-align: justify">
 
-
-    
-    
-
 </div>
 <br>
-<div class='tableauPlaceholder' id='viz1673321726024' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HR&#47;HRDashboard_16684642883090&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='HRDashboard_16684642883090&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HR&#47;HRDashboard_16684642883090&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>               
+
+<center><img src="images/HR Dashboard.png"/></center>            
 
 </br>
 
@@ -130,15 +129,13 @@ Data by [**Mark Bradbourne**](https://data.world/markbradbourne/rwfd-real-world-
 <div style="text-align: justify">
 
 TED talk dashboard created as a group project lead by me for a graduate visualization class
-
-    
-    
     
     
 </div>
 
 <br>
-<div class='tableauPlaceholder' id='viz1674157077784' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gr&#47;GroupTableauDashboard&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GroupTableauDashboard&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gr&#47;GroupTableauDashboard&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div> 
+
+<center><img src="images/TED Talks A Heros Journey of Persuasion.png"/></center>
 
 </br>
 
