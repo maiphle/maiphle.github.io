@@ -43,6 +43,7 @@ In recent years, avocado prices and sales volume have been on the rise in multip
 
 **Tools/Techniques:** RapidMiner, Decision Tree Model
 
+
 The objective of this exercise is to use a decision tree model to predict the credit rating of customers (Bad or Good) based on various attributes to help bank managers decide about loan applicant
 
 <br><br>
