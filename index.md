@@ -20,7 +20,7 @@ This project aims to draw the connection between transportation crashes occurred
 
 
 <br>
-<center><img src="images/rapidminer-credit-risk.png"/></center>
+<center><img src="images/vehicle-collision.png"/></center>
 
 
 ### Avocado Price Prediction
@@ -76,7 +76,7 @@ My analysis aimed to find a solution that can predict reservations that can be c
 A business case report on a regression model I applied to predict the price of houses based on some specific features. Data was extractred from [**Kaggle**](https://www.kaggle.com/datasets/altavish/boston-housing-dataset).
 
 <br>
-<center><img src="images/rapidminer-hotel-booking.png"/></center>
+<center><img src="images/rapidminer-boston-price.png"/></center>
 </br>
 
 ---
