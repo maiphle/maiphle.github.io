@@ -19,9 +19,9 @@ layout: default
 This project aims to draw the connection between transportation crashes occurred in the city of San Francisco and the weather forecasts in the same area. The hypothesis is that inclement weather lead to higher traffic accidents in certain areas of the city.
 
 
-<br><br>
+<br>
 <center><img src="images/vehicle-collision.png"/></center>
-<br><br>
+<br>
 
 ### Avocado Price Prediction
 
@@ -32,9 +32,9 @@ This project aims to draw the connection between transportation crashes occurred
     
 In recent years, avocado prices and sales volume have been on the rise in multiple US markets. I wanted to assess the Avocado pricing data based on consumer demand as it can be helpful to predict the future prices. Applied multiple regression analysis using data collected from [**Hass Avocado Board**](https://www.kaggle.com/datasets/neuromusic/avocado-prices) between 2015 and 2020. 
     
-<br><br>
+<br>
 <center><img src="images/Avocado Price Prediction.svg"/></center>
-<br><br>
+<br>
 
 ### Credit Risk Prediction
 
@@ -46,23 +46,23 @@ In recent years, avocado prices and sales volume have been on the rise in multip
 
 The objective of this exercise is to use a decision tree model to predict the credit rating of customers (Bad or Good) based on various attributes to help bank managers decide about loan applicant
 
-<br><br>
-<center><img src="images/rapidminer-credit-risk.png"/></center>
-<br><br>
+<br>
+<left><img src="images/rapidminer-credit-risk.png"/></left>
+<br>
 
 ### Hotel Booking Cancellation Prediction
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-black?logo=GitHub)](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)
 
 
-**Tools/Techniques:** RapidMiner, Decision Tree Model
+**Tools/Techniques:** RapidMiner, 
   
 In the online booking industry, the cancellation rate for booking is high. When a reservation is cancelled, nothing can be done which creates issues for the institution itself. This has created a need to take precautions by predicting cancellations.
 My analysis aimed to find a solution that can predict reservations that can be cancelled and then prevent the cancellations from happening in order to create a surplus value for the institution
 
 
-<br><br>
+<br>
 <center><img src="images/rapidminer-hotel-booking.png"/></center>
-<br><br>
+<br>
 
 ### Boston House Price Prediction
 
@@ -73,9 +73,9 @@ My analysis aimed to find a solution that can predict reservations that can be c
 
 A business case report on a regression model I applied to predict the price of houses based on some specific features. Data was extractred from [**Kaggle**](https://www.kaggle.com/datasets/altavish/boston-housing-dataset).
 
-<br><br>
+<br>
 <center><img src="images/rapidminer-boston-price.png"/></center>
-<br><br>
+<br>
 
 ---
 
@@ -88,29 +88,25 @@ A business case report on a regression model I applied to predict the price of h
     
 Data by [**Mark Bradbourne**](https://data.world/markbradbourne/rwfd-real-world-fake-data)
     
-<br><br>
+<br>
 <center><img src="images/Call Center Dashboard.png"/></center>
-<br><br>
+<br>
 
 ### HR Dashboard
 
 [![View on Tableau](https://img.shields.io/badge/Tableau-View_on_Tableau-orange?logo=Tableau)](https://public.tableau.com/views/HRDashboard_16684642883090/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
 
-<br><br>
+<br>
 <center><img src="images/HR Dashboard.png"/></center>            
-<br><br>
+<br>
 
 ### TED Talks: A Hero's Journey of Persuasion
 
 [![View on Tableau](https://img.shields.io/badge/Tableau-View_on_Tableau-orange?logo=Tableau)](https://public.tableau.com/views/GroupTableauDashboard/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
 
-
-TED talk dashboard created as a group project lead by me for a graduate visualization class
-       
-
-<br><br>
+<br>
 <center><img src="images/TED Talks A Heros Journey of Persuasion.png"/></center>
-<br><br>
+<br>
 
 
 ---
@@ -127,6 +123,6 @@ TED talk dashboard created as a group project lead by me for a graduate visualiz
 I created a database to store records for a fake modeling agency called Elite Model Management.
 
 
-<br><br>
+<br>
 <center><img src="images/Database ER diagram (crow's foot).png"/></center>
-<br><br>
+<br>
