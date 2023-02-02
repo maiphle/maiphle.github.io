@@ -20,7 +20,7 @@ This project aims to draw the connection between transportation crashes occurred
 
 
 <br>
-IMG
+<center><img src="images/Collision Locations in San Francisco.jpg" width="700" height="700"/></center>
 <br>
 
 ### Avocado Price Prediction
