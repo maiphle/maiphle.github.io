@@ -11,16 +11,16 @@ layout: default
 
 ### City of SF Vehicle Collisions and Weather Conditions
 
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-black?logo=GitHub)](https://github.com/maiphle/City-of-SF-Vehicle-Collisions-and-Weather-Conditions) [![View on Jupyter Notebook](https://img.shields.io/badge/Jupyter-Open_Notebook-orange?logo=Jupyter)](https://github.com/maiphle/City-of-SF-Vehicle-Collisions-and-Weather-Conditions/blob/main/Analysis.ipynb)
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-black?logo=GitHub)](https://github.com/maiphle/City-of-SF-Vehicle-Collisions-and-Weather-Conditions) [![View on Jupyter Notebook](https://img.shields.io/badge/Jupyter-Open_Notebook-orange?logo=Jupyter)](https://github.com/maiphle/City-of-SF-Vehicle-Collisions-and-Weather-Conditions/blob/main/Final%20Project.ipynb)
 
 
-**Tools/Techniques:** Python (Matplotlib, NumPy, Panda, SkLearn)     
+**Tools/Techniques:** Python (Matplotlib, NumPy, Panda, Seaborn, Geopandas)     
 
 This project aims to draw the connection between transportation crashes occurred in the city of San Francisco and the weather forecasts in the same area. The hypothesis is that inclement weather lead to higher traffic accidents in certain areas of the city.
 
 
 <br>
-<center><img src="images/Collision Locations in San Francisco.jpg" width="700" height="700"/></center>
+<center><img src="images/Collision Locations in San Francisco.jpg" width="800" height="700"/></center>
 <br>
 
 ### Avocado Price Prediction
