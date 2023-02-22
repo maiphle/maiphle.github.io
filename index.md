@@ -20,7 +20,7 @@ This project aims to draw the connection between transportation crashes occurred
 
 
 <br>
-<center><img src="images/Collision Locations in San Francisco.jpg" width="800" height="700"/></center>
+<center><img src="images/Collision Locations in San Francisco.jpg" width="650" height="650"/></center>
 <br>
 
 ### Avocado Price Prediction
@@ -50,32 +50,6 @@ The objective of this exercise is to use a decision tree model to predict the cr
 <left><img src="images/rapidminer-credit-risk.png"/></left>
 <br>
 
-### Hotel Booking Cancellation Prediction
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-black?logo=GitHub)](https://github.com/chriskhanhtran/CS224n-NLP-Solutions/tree/master/assignments/)
-
-
-**Tools/Techniques:** RapidMiner, 
-  
-In the online booking industry, the cancellation rate for booking is high. When a reservation is cancelled, nothing can be done which creates issues for the institution itself. This has created a need to take precautions by predicting cancellations.
-My analysis aimed to find a solution that can predict reservations that can be cancelled and then prevent the cancellations from happening in order to create a surplus value for the institution
-
-
-<br>
-IMG
-<br>
-
-### Boston House Price Prediction
-
-[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-black?logo=GitHub)](https://github.com/maiphle/House-Price-Prediction-RapidMiner)
-
-
-**Tools/Techniques:** RapidMiner, Linear Regression
-
-A business case report on a regression model I applied to predict the price of houses based on some specific features. Data was extractred from [**Kaggle**](https://www.kaggle.com/datasets/altavish/boston-housing-dataset).
-
-<br>
-IMG
-<br>
 
 ---
 
