@@ -2,22 +2,41 @@
 layout: default
 ---
 
-**Hello! Thank you so much for visiting my public portfolio. I am sifting through many old projects and updating my portfolio during my free time between classes and work, therefore please excuse possible errors.** 
-
-
 # Portfolio
 ---
 ## Data Science
+
+### Kidney Stone Prediction based on Urine Analysis Public
+
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-black?logo=GitHub)](https://github.com/maiphle/Kidney-Stone-Prediction-based-on-Urine-Analysis) [![View on Jupyter Notebook](https://img.shields.io/badge/Jupyter-Open_Notebook-orange?logo=Jupyter)](https://github.com/maiphle/Kidney-Stone-Prediction-based-on-Urine-Analysis/blob/main/Final%20Project.ipynb)
+[![View on PowerPoint](https://img.shields.io/badge/PowerPoint-Open_Presentation-orange?logo=Microsoft)](https://tuprd-my.sharepoint.com/:p:/r/personal/tuq42303_temple_edu/Documents/Classes/Backup/Temple%20Classes/Spring%202023/STAT%205603/Final%20Project/Kidney%20Stone%20Prediction%20based%20on%20Urine%20Analysis.pptx?d=w698145834ac3446d9d87a31d9b9e68f5&csf=1&web=1&e=zQtWrj)
+
+**Tools/Techniques:** Python (Matplotlib, NumPy, Panda, Seaborn, sklearn)     
+
+My objective in this project is to find the best model to predict the probability of a kidney stone being present in a sample of data collected from urinalysis. The classification models used are Random Forest Classifier, K Neighbors Classifier, and Logistic Regression. Based on the final results, Random Forest is the best model to predict the probability of presence of kidney stones.
+
+<br>
+<iframe 
+    src="https://tuprd-my.sharepoint.com/personal/tuq42303_temple_edu/_layouts/15/Doc.aspx?sourcedoc={69814583-4ac3-446d-9d87-a31d9b9e68f5}&amp;action=embedview&amp;wdAr=1.7777777777777777" 
+    width="476px" 
+    height="288px" 
+    frameborder="0">This is an embedded <a target="_blank"
+                                            href="https://office.com">Microsoft Office</a> presentation, powered by <a 
+                                                                                                                        target="_blank" 
+                                                                                                                        href="https://office.com/webapps">Office</a>.
+</iframe>
+<br>
 
 ### City of SF Vehicle Collisions and Weather Conditions
 
 [![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-black?logo=GitHub)](https://github.com/maiphle/City-of-SF-Vehicle-Collisions-and-Weather-Conditions) [![View on Jupyter Notebook](https://img.shields.io/badge/Jupyter-Open_Notebook-orange?logo=Jupyter)](https://github.com/maiphle/City-of-SF-Vehicle-Collisions-and-Weather-Conditions/blob/main/Final%20Project.ipynb)
 
 
-**Tools/Techniques:** Python (Matplotlib, NumPy, Panda, Seaborn, Geopandas)     
+**Tools/Techniques:** Python (Matplotlib, NumPy, Panda, Seaborn, Geopandas. sklearn, XGBoost)     
 
 This project aims to draw the connection between transportation crashes occurred in the city of San Francisco and the weather forecasts in the same area. The hypothesis is that inclement weather lead to higher traffic accidents in certain areas of the city.
 
+The majority of accidents happened when the sky is clear or cloudy. The temperature does not appear to be a major factor in the likelihood of collisions that cause moderate injuries. There is also no apparent correlation between number of people involved and the other factors, therefore a different approach to the analysis was used. Therefore, Logistic regression, XGBoost, and Random Forest were to predict moderate injury collisions. 
 
 <br>
 <center><img src="images/Collision Locations in San Francisco.jpg" width="650" height="650"/></center>
