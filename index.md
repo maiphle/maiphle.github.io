@@ -16,15 +16,7 @@ layout: default
 My objective in this project is to find the best model to predict the probability of a kidney stone being present in a sample of data collected from urinalysis. The classification models used are Random Forest Classifier, K Neighbors Classifier, and Logistic Regression. Based on the final results, Random Forest is the best model to predict the probability of presence of kidney stones.
 
 <br>
-<iframe 
-    src="https://tuprd-my.sharepoint.com/personal/tuq42303_temple_edu/_layouts/15/Doc.aspx?sourcedoc={69814583-4ac3-446d-9d87-a31d9b9e68f5}&amp;action=embedview&amp;wdAr=1.7777777777777777" 
-    width="476px" 
-    height="288px" 
-    frameborder="0">This is an embedded <a target="_blank"
-                                            href="https://office.com">Microsoft Office</a> presentation, powered by <a 
-                                                                                                                        target="_blank" 
-                                                                                                                        href="https://office.com/webapps">Office</a>.
-</iframe>
+
 <br>
 
 ### City of SF Vehicle Collisions and Weather Conditions
