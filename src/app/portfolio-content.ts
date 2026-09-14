@@ -45,7 +45,7 @@ export const PORTFOLIO_CONTENT: PortfolioContent = {
     links: [
       {
         label: 'Resume',
-        url: 'https://tuprd-my.sharepoint.com/:b:/r/personal/tuq42303_temple_edu/Documents/Resume_Mai_Jan_2023_1.pdf?csf=1&web=1&e=2jivpg',
+        url: '/docs/Mai_Le_Resume_2026.pdf',
       },
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/maip-le/' },
       {
