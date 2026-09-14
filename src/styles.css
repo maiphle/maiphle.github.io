@@ -91,4 +91,6 @@ body {
 	color: var(--text);
 	margin: 0;
 	overscroll-behavior-y: auto;
+	overflow-y: auto;
+ overflow-x: clip;
 }
