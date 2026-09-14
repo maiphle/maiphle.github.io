@@ -34,10 +34,6 @@ jobs:
       - name: Build
         run: npx ng build --configuration production --base-href /
 
-      - name: Enable SPA fallback and disable Jekyll
-        run: |
-          cp dist/web-resume/browser/index.html dist/web-resume/browser/404.html
-          touch dist/web-resume/browser/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
