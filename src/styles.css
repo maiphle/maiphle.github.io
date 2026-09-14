@@ -90,4 +90,5 @@ body {
 	background: var(--bg);
 	color: var(--text);
 	margin: 0;
+	overscroll-behavior-y: auto;
 }
