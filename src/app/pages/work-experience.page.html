@@ -1,0 +1,22 @@
+<section aria-labelledby="work-experience-title">
+  <h1 id="work-experience-title">Work Experience</h1>
+
+  <ul class="experience-list" aria-label="Professional experience list">
+    @for (experience of experiences; track experience.title + experience.period) {
+      <li class="experience-item">
+        <div class="experience-header">
+          <h2>{{ experience.title }}</h2>
+          <p class="experience-period">{{ experience.period }}</p>
+        </div>
+
+        <p class="experience-meta">{{ experience.company }} | {{ experience.location }}</p>
+
+        <ul class="experience-highlights">
+          @for (bullet of experience.bullets; track bullet) {
+            <li>{{ bullet }}</li>
+          }
+        </ul>
+      </li>
+    }
+  </ul>
+</section>

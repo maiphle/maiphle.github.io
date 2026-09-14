@@ -1,0 +1,129 @@
+﻿<div class="site-shell">
+  <header class="top-header">
+    <div class="top-header-bar">
+      <a
+        class="brand-link"
+        [routerLink]="'/'"
+        (click)="closeMenu()"
+      >
+        Mai Le
+      </a>
+
+      <div class="top-header-controls">
+        @if (isSmallScreen()) {
+          <button
+            type="button"
+            class="theme-toggle header-theme-toggle"
+            (click)="toggleTheme()"
+            [attr.aria-label]="theme() === 'light' ? 'Switch to dark mode' : 'Switch to light mode'"
+            [title]="theme() === 'light' ? 'Switch to dark mode' : 'Switch to light mode'"
+          >
+            {{ theme() === 'light' ? '☀' : '🌙' }}
+          </button>
+        }
+
+        <button
+          type="button"
+          class="menu-toggle"
+          (click)="toggleMenu()"
+          [attr.aria-expanded]="isMenuOpen()"
+          aria-controls="primary-navigation"
+          aria-label="Toggle navigation menu"
+        >
+          <span aria-hidden="true" class="menu-toggle-line" [class.menu-toggle-line-top-open]="isMenuOpen()"></span>
+          <span aria-hidden="true" class="menu-toggle-line" [class.menu-toggle-line-middle-open]="isMenuOpen()"></span>
+          <span aria-hidden="true" class="menu-toggle-line" [class.menu-toggle-line-bottom-open]="isMenuOpen()"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav
+      id="primary-navigation"
+      aria-label="Primary navigation"
+      [class.nav-collapsed]="isSmallScreen() && !isMenuOpen()"
+      [class.nav-expanded-mobile]="isSmallScreen() && isMenuOpen()"
+    >
+      @if (isSmallScreen()) {
+        <ul class="nav-list nav-list-mobile" aria-label="Main navigation menu">
+          @for (item of navItems; track item.path) {
+            <li class="nav-item" [class.nav-item-mobile-dropdown]="item.label === 'Portfolio'">
+              @if (item.label === 'Portfolio') {
+                <button
+                  type="button"
+                  class="nav-link-button nav-link-button-mobile"
+                  (click)="toggleMobilePortfolioMenu()"
+                  [attr.aria-expanded]="isMobilePortfolioExpanded()"
+                  aria-label="Toggle Portfolio topics"
+                >
+                  {{ item.label }}
+                </button>
+
+                @if (isMobilePortfolioExpanded()) {
+                  <ul class="mobile-dropdown-submenu" aria-label="Portfolio topics">
+                    @for (topic of portfolioTopics; track topic.path) {
+                      <li>
+                        <a [routerLink]="topic.path" routerLinkActive="active" (click)="closeMenu()">{{ topic.label }}</a>
+                      </li>
+                    }
+                  </ul>
+                }
+              } @else {
+                <a
+                  [routerLink]="item.path"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+                  (click)="closeMenu()"
+                >
+                  {{ item.label }}
+                </a>
+              }
+            </li>
+          }
+        </ul>
+      } @else {
+        <ul class="nav-list">
+          @for (item of navItems; track item.path) {
+            <li class="nav-item" [class.has-submenu]="item.label === 'Portfolio'">
+              @if (item.label === 'Home') {
+                <button
+                  type="button"
+                  class="theme-toggle"
+                  (click)="toggleTheme()"
+                  [attr.aria-label]="theme() === 'light' ? 'Switch to dark mode' : 'Switch to light mode'"
+                  [title]="theme() === 'light' ? 'Switch to dark mode' : 'Switch to light mode'"
+                >
+                  {{ theme() === 'light' ? '☀' : '🌙' }}
+                </button>
+              }
+
+              @if (item.label === 'Portfolio') {
+                <button type="button" class="nav-link-button" aria-label="Open Portfolio topics">
+                  {{ item.label }}
+                </button>
+                <ul class="submenu" aria-label="Portfolio topics">
+                  @for (topic of portfolioTopics; track topic.path) {
+                    <li>
+                      <a [routerLink]="topic.path" routerLinkActive="active">{{ topic.label }}</a>
+                    </li>
+                  }
+                </ul>
+              } @else {
+                <a
+                  [routerLink]="item.path"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+                >
+                  {{ item.label }}
+                </a>
+              }
+            </li>
+          }
+        </ul>
+      }
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

@@ -1,0 +1,15 @@
+<section aria-labelledby="education-title">
+  <h1 id="education-title">Education</h1>
+
+  <ul class="education-list">
+    @for (entry of entries; track entry.institution) {
+      <li>
+        <h2>{{ entry.institution }}</h2>
+        <p><strong>{{ entry.degree }}</strong></p>
+        @if (entry.program) {
+          <p>{{ entry.program }}</p>
+        }
+      </li>
+    }
+  </ul>
+</section>

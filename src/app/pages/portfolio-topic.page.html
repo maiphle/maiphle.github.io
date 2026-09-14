@@ -1,0 +1,128 @@
+<section [attr.aria-labelledby]="topicTitle()">
+  <h1 [id]="topicTitle()">{{ topicTitle() }}</h1>
+
+  @if (projects().length === 0) {
+    <p class="empty-state">Content coming soon.</p>
+  }
+
+  @for (project of projects(); track project.title) {
+    <article class="project">
+      @if (isDataVisualizationTopic()) {
+        <div class="project-title-row">
+          <h2>{{ project.title }}</h2>
+
+          <p class="project-links title-links" aria-label="Project links">
+            @for (link of project.links; track link.url) {
+              @if (getBadgeImageUrl(link); as badgeImageUrl) {
+                <a class="badge-image-link" [href]="link.url" target="_blank" rel="noopener noreferrer">
+                  <img class="badge-image" [src]="badgeImageUrl" [alt]="link.label" loading="lazy" decoding="async" />
+                </a>
+              } @else {
+                <a class="badge-link" [href]="link.url" target="_blank" rel="noopener noreferrer">
+                  {{ link.label }}
+                </a>
+              }
+            }
+          </p>
+        </div>
+
+        @if (project.imagePath) {
+          <div class="project-image-wrap under-title-image">
+            <img
+              class="project-image"
+              [ngSrc]="project.imagePath"
+              [alt]="project.imageAlt ?? project.title"
+              width="900"
+              height="560"
+              loading="lazy"
+              (click)="openImageOverlay(project.imagePath, project.imageAlt ?? project.title)"
+            />
+          </div>
+        }
+      } @else {
+        <div class="project-layout">
+          <div class="project-content">
+            <h2>{{ project.title }}</h2>
+
+            <p class="project-links" aria-label="Project links">
+              @for (link of project.links; track link.url) {
+                @if (getBadgeImageUrl(link); as badgeImageUrl) {
+                  <a class="badge-image-link" [href]="link.url" target="_blank" rel="noopener noreferrer">
+                    <img class="badge-image" [src]="badgeImageUrl" [alt]="link.label" loading="lazy" decoding="async" />
+                  </a>
+                } @else {
+                  <a class="badge-link" [href]="link.url" target="_blank" rel="noopener noreferrer">
+                    {{ link.label }}
+                  </a>
+                }
+              }
+            </p>
+
+            @if (project.tools) {
+              <p><strong>Tools/Techniques:</strong> {{ project.tools }}</p>
+            }
+
+            <p>{{ project.objective }}</p>
+
+            @if (project.details) {
+              <p>{{ project.details }}</p>
+            }
+          </div>
+
+          @if (project.imagePath) {
+            <div class="project-image-wrap">
+              <img
+                class="project-image"
+                [ngSrc]="project.imagePath"
+                [alt]="project.imageAlt ?? project.title"
+                width="900"
+                height="560"
+                loading="lazy"
+                (click)="openImageOverlay(project.imagePath, project.imageAlt ?? project.title)"
+              />
+            </div>
+          }
+        </div>
+      }
+    </article>
+  }
+</section>
+
+@if (overlayImagePath()) {
+  <div class="image-overlay" role="dialog" aria-modal="true" aria-label="Expanded project image" (click)="closeImageOverlay()">
+    <button type="button" class="overlay-close" (click)="closeImageOverlay(); $event.stopPropagation()" aria-label="Close image overlay">
+      Close
+    </button>
+
+    <div
+      class="overlay-image-wrap"
+      [class.zoomed]="overlayScale() > 1"
+      (click)="$event.stopPropagation()"
+      (mousedown)="startOverlayDrag($event)"
+      (mousemove)="dragOverlayImage($event)"
+      (mouseup)="stopOverlayDrag()"
+      (mouseleave)="stopOverlayDrag()"
+    >
+      <img
+        class="overlay-image"
+        [class.zoomed]="overlayScale() > 1"
+        [ngSrc]="overlayImagePath()!"
+        [alt]="overlayImageAlt()"
+        width="900"
+        height="560"
+        [style.transform]="'translate(' + overlayOffsetX() + 'px, ' + overlayOffsetY() + 'px) scale(' + overlayScale() + ')'"
+        draggable="false"
+        priority
+      />
+    </div>
+
+    <div class="overlay-controls" (click)="$event.stopPropagation()">
+      <button type="button" class="zoom-btn" (click)="zoomOutOverlay()" [disabled]="overlayScale() <= 1" aria-label="Zoom out">
+        -
+      </button>
+      <button type="button" class="zoom-btn" (click)="zoomInOverlay()" [disabled]="overlayScale() >= 3" aria-label="Zoom in">
+        +
+      </button>
+    </div>
+  </div>
+}

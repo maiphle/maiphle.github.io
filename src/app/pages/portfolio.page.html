@@ -1,0 +1,10 @@
+<section aria-labelledby="portfolio-title">
+  <h1 id="portfolio-title">Portfolio</h1>
+  <p>Select a portfolio topic:</p>
+
+  <ul class="topic-list">
+    @for (topic of topics; track topic.path) {
+      <li><a [routerLink]="topic.path">{{ topic.label }}</a></li>
+    }
+  </ul>
+</section>

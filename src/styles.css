@@ -1,0 +1,93 @@
+:root {
+	color-scheme: light dark;
+	--bg: #ffffff;
+	--text: #232323;
+	--muted: #666666;
+	--link: #267cb9;
+	--nav-text: #111111;
+	--border: #e5e5e5;
+	--surface: #ffffff;
+	--surface-border: #d0d0d0;
+	--surface-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+	--hero-title: #272c49;
+	--hero-copy: #34384c;
+	--resume-button: #ff6468;
+	--resume-button-hover: #f05157;
+	--icon: #272c49;
+	--icon-hover: #15182a;
+	--badge-bg: #1f1f1f;
+	--badge-bg-hover: #333333;
+	--overlay-bg: rgba(0, 0, 0, 0.86);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #111317;
+		--text: #e8e9ec;
+		--muted: #b8bcc4;
+		--link: #7cb7ff;
+		--nav-text: #f3f4f6;
+		--border: #343944;
+		--surface: #1a1d23;
+		--surface-border: #3f4653;
+		--surface-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+		--hero-title: #e6ebff;
+		--hero-copy: #c8cede;
+		--resume-button: #ff7277;
+		--resume-button-hover: #ff5e65;
+		--icon: #e1e7ff;
+		--icon-hover: #ffffff;
+		--badge-bg: #2c313a;
+		--badge-bg-hover: #3b4250;
+		--overlay-bg: rgba(0, 0, 0, 0.9);
+	}
+}
+
+:root[data-theme='light'] {
+	--bg: #ffffff;
+	--text: #232323;
+	--muted: #666666;
+	--link: #267cb9;
+	--nav-text: #111111;
+	--border: #e5e5e5;
+	--surface: #ffffff;
+	--surface-border: #d0d0d0;
+	--surface-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+	--hero-title: #272c49;
+	--hero-copy: #34384c;
+	--resume-button: #ff6468;
+	--resume-button-hover: #f05157;
+	--icon: #272c49;
+	--icon-hover: #15182a;
+	--badge-bg: #1f1f1f;
+	--badge-bg-hover: #333333;
+	--overlay-bg: rgba(0, 0, 0, 0.86);
+}
+
+:root[data-theme='dark'] {
+	--bg: #111317;
+	--text: #e8e9ec;
+	--muted: #b8bcc4;
+	--link: #7cb7ff;
+	--nav-text: #f3f4f6;
+	--border: #343944;
+	--surface: #1a1d23;
+	--surface-border: #3f4653;
+	--surface-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+	--hero-title: #e6ebff;
+	--hero-copy: #c8cede;
+	--resume-button: #ff7277;
+	--resume-button-hover: #ff5e65;
+	--icon: #e1e7ff;
+	--icon-hover: #ffffff;
+	--badge-bg: #2c313a;
+	--badge-bg-hover: #3b4250;
+	--overlay-bg: rgba(0, 0, 0, 0.9);
+}
+
+html,
+body {
+	background: var(--bg);
+	color: var(--text);
+	margin: 0;
+}
