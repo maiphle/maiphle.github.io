@@ -1,4 +1,21 @@
-# Mai Le
+# Mai Le — live GitHub website text
+
+Source: https://maiphle.github.io/
+Captured: September 29, 2026 (America/New_York)
+Deployed bundle: `main-4SL666YT.js`
+
+> Snapshot of the live site’s text, extracted from its deployed Angular content and templates. Original wording is preserved. Images and linked document contents are not included. Project descriptions stored in the deployed site are included below; the Data Visualization page currently displays project titles, links, and images rather than those descriptions.
+
+> Accuracy note: the live site says “Bachelor of Business Administration.” Mai has confirmed the correct degree is B.S.B.A.; the source wording below is retained for archival fidelity.
+
+## Navigation
+
+- [Home](https://maiphle.github.io/)
+- [Work Experience](https://maiphle.github.io/work-experience)
+- [Education](https://maiphle.github.io/education)
+- [Portfolio](https://maiphle.github.io/portfolio)
+
+## Home
 
 Hi, I am Mai,
 Data Enthusiast
@@ -61,11 +78,18 @@ Business Analytics
 
 ### Rider University
 
-Bachelor of Science in Business Administration
+Bachelor of Business Administration
 
 Majors: Global Supply Chain Management and Investment Finance | Minor: Business Analytics
 
 ## Portfolio
+
+Select a portfolio topic:
+
+- Data Science
+- Data Visualization
+- Database Design
+- Miscellaneous
 
 ### Data Science
 
@@ -151,3 +175,7 @@ Database design for a fictional modeling agency.
 Created schema to store records for customers, projects, employees, and related entities.
 
 - [View on GitHub](https://github.com/maiphle/Elite-Model-Mgmt-Database)
+
+### Miscellaneous
+
+Content coming soon.
