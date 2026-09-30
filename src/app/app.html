@@ -1,129 +1,351 @@
-﻿<div class="site-shell">
-  <header class="top-header">
-    <div class="top-header-bar">
-      <a
-        class="brand-link"
-        [routerLink]="'/'"
-        (click)="closeMenu()"
-      >
-        Mai Le
+<a class="skip" href="#intro">Skip to content</a>
+<header>
+  <a class="wordmark" href="#home" aria-label="Mai Le home">ml</a>
+  <nav aria-label="Main navigation">
+    <a href="#projects">Selected work</a>
+    <a href="#interests">Off the clock</a>
+    <a href="#experience">Experience</a>
+    <a href="docs/github-live-content.md" target="_blank" rel="noopener noreferrer">Minimal site</a>
+  </nav>
+  <div class="header-actions">
+    <span class="nav-note">A LITTLE LOGIC. A LITTLE SOUL.</span>
+    <button
+      class="theme-toggle"
+      type="button"
+      (click)="toggleTheme()"
+      [attr.aria-pressed]="dark()"
+      aria-label="Dark mode"
+    >
+      {{ dark() ? 'Light mode' : 'Dark mode' }}
+    </button>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-top">
+      <span class="mono">PORTFOLIO / MAI LE</span>
+      <span class="mono">BASED IN NEW JERSEY</span>
+    </div>
+    <div class="name-line">
+      <h1>Mai Le<span class="period">.</span></h1>
+      <div class="orb" aria-hidden="true">
+        <div class="orb-lines"></div>
+        <span>DATA<br />MEETS<br />CURIOSITY</span>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <p>Finding the human side<br />of <em>data.</em></p>
+      <div class="hero-caption">
+        <span class="mono">BUSINESS INTELLIGENCE ANALYST</span>
+        <p>Analytical by nature.<br />Curious about everything.</p>
+      </div>
+      <a class="scroll-cue" href="#intro"
+        >SCROLL TO EXPLORE
+        <span aria-hidden="true">
+          <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </span>
       </a>
+    </div>
+  </section>
 
-      <div class="top-header-controls">
-        @if (isSmallScreen()) {
+  <section class="intro section" id="intro">
+    <div class="section-label">
+      <span>01 / HELLO, WORLD</span>
+      <span class="tiny-cross">+</span>
+    </div>
+    <div class="intro-content">
+      <h2>I make complex data<br />feel a little more <em>human.</em></h2>
+      <div class="intro-details">
+        <p>
+          I'm Mai, a Business Intelligence Analyst at Dell Technologies. I work with SQL, Python,
+          and Power BI to turn operational data into something people can understand and use.
+        </p>
+        <p>
+          My sweet spot is where thoughtful analysis meets thoughtful design: clear dashboards,
+          reliable workflows, and better questions.
+        </p>
+      </div>
+      <p class="education-blurb">
+        I hold an M.S. in Business Analytics from Temple University and a B.S.B.A. from Rider
+        University, with majors in Global Supply Chain Management and Investment Finance and a
+        minor in Business Analytics.
+      </p>
+      <span class="code-note">const approach = ['clarity', 'curiosity', 'care'];</span>
+    </div>
+  </section>
+
+  <section class="skills" aria-label="My skillset">
+    <div class="skills-header">
+      <span class="mono">THE TOOLS IN MY TOOLKIT</span>
+      <button
+        (click)="paused.set(!paused())"
+        [attr.aria-pressed]="paused()"
+        aria-label="Pause or resume skills animation"
+      >
+        {{ paused() ? 'Play motion' : 'Pause motion' }}
+      </button>
+    </div>
+    <div class="marquee" [class.paused]="paused()">
+      <div class="marquee-track">
+        <div class="skill-set">
+          @for (skill of skills; track skill) {
+            <span>{{ skill }}</span>
+            <b class="skill-separator" aria-hidden="true"></b>
+          }
+        </div>
+        <div class="skill-set" aria-hidden="true">
+          @for (skill of skills; track skill) {
+            <span>{{ skill }}</span>
+            <b class="skill-separator" aria-hidden="true"></b>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects section" id="projects">
+    <div class="section-heading">
+      <div>
+        <span class="section-label">02 / SELECTED WORK</span>
+        <h2>A few things<br />I've <em>worked on.</em></h2>
+      </div>
+      <p>Different questions.<br />The same curiosity.</p>
+    </div>
+    <div
+      class="carousel"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Selected projects"
+      tabindex="0"
+      (keydown.arrowright)="next()"
+      (keydown.arrowleft)="previous()"
+      (touchstart)="touchStart($event)"
+      (touchend)="touchEnd($event)"
+    >
+      <div class="project-copy" aria-live="polite">
+        <div class="project-meta">
+          <span>{{ projects[active()].type }}</span>
+          <span>{{ projects[active()].number }} / {{ projects.length }}</span>
+        </div>
+        <h3>{{ projects[active()].name }}</h3>
+        <p>{{ projects[active()].description }}</p>
+        <div class="tags">
+          @for (tag of projects[active()].tags; track tag) {
+            <span>{{ tag }}</span>
+          }
+        </div>
+        <div class="project-title">
+          {{ projects[active()].title }}
+          @if (projects[active()].url) {
+            <a class="project-link" [href]="projects[active()].url" target="_blank" rel="noopener noreferrer"
+              >View project</a
+            >
+          }
+        </div>
+      </div>
+      <div class="project-visual">
+        <div class="visual-top">
+          <span>ANALYSIS / {{ projects[active()].number }}</span>
+          <span>+ + +</span>
+        </div>
+        <div class="chart-title">{{ projects[active()].visual }}</div>
+        <div class="chart">
+          @for (row of projects[active()].rows; track row; let i = $index) {
+            <div class="chart-row">
+              <span>{{ row }}</span>
+              <div class="bar-track">
+                <div [style.width.%]="projects[active()].bars[i]" class="bar"></div>
+              </div>
+            </div>
+          }
+        </div>
+        <div class="visual-footer">
+          <span>ILLUSTRATIVE VISUAL</span>
+          <span>NOT PROJECT DATA</span>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-footer">
+      <span class="mono">EXPLORE THE COLLECTION</span>
+      <div class="dots">
+        @for (project of projects; track project.number; let i = $index) {
           <button
-            type="button"
-            class="theme-toggle header-theme-toggle"
-            (click)="toggleTheme()"
-            [attr.aria-label]="theme() === 'light' ? 'Switch to dark mode' : 'Switch to light mode'"
-            [title]="theme() === 'light' ? 'Switch to dark mode' : 'Switch to light mode'"
-          >
-            {{ theme() === 'light' ? '☀' : '🌙' }}
-          </button>
+            [class.active]="active() === i"
+            (click)="active.set(i)"
+            [attr.aria-label]="'Show ' + project.title"
+            [attr.aria-pressed]="active() === i"
+          ></button>
         }
-
-        <button
-          type="button"
-          class="menu-toggle"
-          (click)="toggleMenu()"
-          [attr.aria-expanded]="isMenuOpen()"
-          aria-controls="primary-navigation"
-          aria-label="Toggle navigation menu"
-        >
-          <span aria-hidden="true" class="menu-toggle-line" [class.menu-toggle-line-top-open]="isMenuOpen()"></span>
-          <span aria-hidden="true" class="menu-toggle-line" [class.menu-toggle-line-middle-open]="isMenuOpen()"></span>
-          <span aria-hidden="true" class="menu-toggle-line" [class.menu-toggle-line-bottom-open]="isMenuOpen()"></span>
+      </div>
+      <div class="carousel-controls">
+        <button (click)="previous()" aria-label="Previous project">
+          <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m15 6-6 6 6 6" />
+          </svg>
+        </button>
+        <button (click)="next()" aria-label="Next project">
+          <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m9 6 6 6-6 6" />
+          </svg>
         </button>
       </div>
     </div>
+  </section>
 
-    <nav
-      id="primary-navigation"
-      aria-label="Primary navigation"
-      [class.nav-collapsed]="isSmallScreen() && !isMenuOpen()"
-      [class.nav-expanded-mobile]="isSmallScreen() && isMenuOpen()"
-    >
-      @if (isSmallScreen()) {
-        <ul class="nav-list nav-list-mobile" aria-label="Main navigation menu">
-          @for (item of navItems; track item.path) {
-            <li class="nav-item" [class.nav-item-mobile-dropdown]="item.label === 'Portfolio'">
-              @if (item.label === 'Portfolio') {
-                <button
-                  type="button"
-                  class="nav-link-button nav-link-button-mobile"
-                  (click)="toggleMobilePortfolioMenu()"
-                  [attr.aria-expanded]="isMobilePortfolioExpanded()"
-                  aria-label="Toggle Portfolio topics"
-                >
-                  {{ item.label }}
-                </button>
+  <section class="interests section" id="interests">
+    <div class="section-heading">
+      <div>
+        <span class="section-label">03 / BEYOND THE SCREEN</span>
+        <h2>More than<br /><em>rows & columns.</em></h2>
+      </div>
+      <p>A few things that<br />keep me curious.</p>
+    </div>
+    <div class="interest-grid">
+      <article>
+        <div class="interest-number">[ 01 ]</div>
+        <h3>Growing things.</h3>
+        <p>
+          A little patience, a little experimenting. Finding joy in plants and whatever's growing
+          next.
+        </p>
+        <span class="interest-tag">GARDENING & HOUSEPLANTS</span>
+      </article>
+      <article>
+        <div class="interest-number">[ 02 ]</div>
+        <h3>Taking the scenic route.</h3>
+        <p>
+          Exploring new places, noticing the details, and leaving room for the unexpected.
+        </p>
+        <span class="interest-tag">TRAVEL & EXPLORING</span>
+      </article>
+      <article>
+        <div class="interest-number">[ 03 ]</div>
+        <h3>Little local discoveries.</h3>
+        <p>
+          Food markets, a quiet trail, a museum afternoon. Good weekends don't need a grand plan.
+        </p>
+        <span class="interest-tag">FOOD, NATURE & CULTURE</span>
+      </article>
+    </div>
+  </section>
 
-                @if (isMobilePortfolioExpanded()) {
-                  <ul class="mobile-dropdown-submenu" aria-label="Portfolio topics">
-                    @for (topic of portfolioTopics; track topic.path) {
-                      <li>
-                        <a [routerLink]="topic.path" routerLinkActive="active" (click)="closeMenu()">{{ topic.label }}</a>
-                      </li>
-                    }
-                  </ul>
-                }
-              } @else {
-                <a
-                  [routerLink]="item.path"
-                  routerLinkActive="active"
-                  [routerLinkActiveOptions]="{ exact: item.path === '/' }"
-                  (click)="closeMenu()"
-                >
-                  {{ item.label }}
-                </a>
-              }
-            </li>
-          }
-        </ul>
-      } @else {
-        <ul class="nav-list">
-          @for (item of navItems; track item.path) {
-            <li class="nav-item" [class.has-submenu]="item.label === 'Portfolio'">
-              @if (item.label === 'Home') {
-                <button
-                  type="button"
-                  class="theme-toggle"
-                  (click)="toggleTheme()"
-                  [attr.aria-label]="theme() === 'light' ? 'Switch to dark mode' : 'Switch to light mode'"
-                  [title]="theme() === 'light' ? 'Switch to dark mode' : 'Switch to light mode'"
-                >
-                  {{ theme() === 'light' ? '☀' : '🌙' }}
-                </button>
-              }
-
-              @if (item.label === 'Portfolio') {
-                <button type="button" class="nav-link-button" aria-label="Open Portfolio topics">
-                  {{ item.label }}
-                </button>
-                <ul class="submenu" aria-label="Portfolio topics">
-                  @for (topic of portfolioTopics; track topic.path) {
-                    <li>
-                      <a [routerLink]="topic.path" routerLinkActive="active">{{ topic.label }}</a>
-                    </li>
-                  }
-                </ul>
-              } @else {
-                <a
-                  [routerLink]="item.path"
-                  routerLinkActive="active"
-                  [routerLinkActiveOptions]="{ exact: item.path === '/' }"
-                >
-                  {{ item.label }}
-                </a>
-              }
-            </li>
-          }
-        </ul>
-      }
-    </nav>
-  </header>
-
-  <main class="page-content">
-    <router-outlet></router-outlet>
-  </main>
-</div>
+  <section class="experience section" id="experience">
+    <div class="section-label">04 / ALONG THE WAY</div>
+    <h2 class="career-title">Where I've put<br />curiosity <em>to work.</em></h2>
+    <ol class="career-timeline" aria-label="Work history, most recent first">
+      <li class="timeline-item">
+        <details class="career-card">
+          <summary>
+            <span class="career-date">Jan 2024 – Present</span>
+            <span class="career-heading">
+              <span class="company-mark dell" aria-hidden="true">DELL</span>
+              <span class="career-company">Dell Technologies</span>
+            </span>
+            <span class="career-role">Business Intelligence Analyst</span>
+            <span class="career-team">Global Production Planning</span>
+            <span class="career-expand">
+              <span class="when-closed">View details</span>
+              <span class="when-open">Hide details</span>
+              <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="career-description">
+            <p>
+              Automated Python and SQL workflows processing over 1M rows daily. Built 15+ Power BI
+              dashboards and analytical reports for 100+ weekly users, and managed 50+ workflows
+              and supporting SQL Server systems.
+            </p>
+          </div>
+        </details>
+      </li>
+      <li class="timeline-item">
+        <details class="career-card">
+          <summary>
+            <span class="career-date">Jun 2023 – Dec 2023</span>
+            <span class="career-heading">
+              <span class="company-mark dell" aria-hidden="true">DELL</span>
+              <span class="career-company">Dell Technologies</span>
+            </span>
+            <span class="career-role">Data Science Intern</span>
+            <span class="career-team">ISG Market Intelligence</span>
+            <span class="career-expand">
+              <span class="when-closed">View details</span>
+              <span class="when-open">Hide details</span>
+              <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="career-description">
+            <p>
+              Analyzed competitor financial data and $18.5B+ in industry trends. Built an
+              interactive Power BI solution and presented findings to senior leadership.
+            </p>
+          </div>
+        </details>
+      </li>
+      <li class="timeline-item">
+        <details class="career-card">
+          <summary>
+            <span class="career-date">Jul 2021 – Jul 2022</span>
+            <span class="career-heading">
+              <span class="company-mark td" aria-hidden="true">TD</span>
+              <span class="career-company">TD Bank</span>
+            </span>
+            <span class="career-role">Product Specialist</span>
+            <span class="career-team">Consumer Deposit & Payment Products</span>
+            <span class="career-expand">
+              <span class="when-closed">View details</span>
+              <span class="when-open">Hide details</span>
+              <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="career-description">
+            <p>
+              Automated recurring data collection with VBA and analyzed operational data
+              supporting 10,000+ customers. Resolved workflow challenges affecting 1,158 branches.
+            </p>
+          </div>
+        </details>
+      </li>
+      <li class="timeline-item">
+        <details class="career-card">
+          <summary>
+            <span class="career-date">Jan 2021 – May 2021</span>
+            <span class="career-heading">
+              <span class="company-mark amtrak" aria-hidden="true">AMTRAK</span>
+              <span class="career-company">Amtrak</span>
+            </span>
+            <span class="career-role">Business Analyst Intern</span>
+            <span class="career-team">Procurement & Supply Chain</span>
+            <span class="career-expand">
+              <span class="when-closed">View details</span>
+              <span class="when-open">Hide details</span>
+              <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </span>
+          </summary>
+          <div class="career-description">
+            <p>
+              Analyzed procurement data for a $16.5M AWS initiative and developed reporting for
+              costs and operational KPIs.
+            </p>
+          </div>
+        </details>
+      </li>
+    </ol>
+  </section>
+</main>
+<footer>
+  <a class="footer-name" href="#home">Mai Le<span>.</span></a>
+  <p>Made with care.<br />Always a work in progress.</p>
+  <a href="#home">BACK TO TOP</a>
+  <span class="mono">© 2026 MAI LE</span>
+</footer>
