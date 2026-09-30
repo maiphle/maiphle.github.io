@@ -1,0 +1,14 @@
+<div class="minimal-page">
+  <a class="minimal-back" href="#home">← Back to full site</a>
+
+  @if (loading()) {
+    <p class="minimal-status">Loading…</p>
+  } @else if (error()) {
+    <p class="minimal-status">
+      Couldn't load the content. Try
+      <a href="docs/github-live-content.md" target="_blank" rel="noopener noreferrer">opening the file directly</a>.
+    </p>
+  } @else {
+    <div class="minimal-content" [innerHTML]="content()"></div>
+  }
+</div>

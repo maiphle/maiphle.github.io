@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, DestroyRef, inject, signal } from '@angular/core';
+import { MinimalPage } from './minimal-page';
 
 interface Project {
   name: string;
@@ -15,10 +16,12 @@ interface Project {
 
 @Component({
   selector: 'app-root',
+  imports: [MinimalPage],
   templateUrl: './app.html',
 })
 export class App {
   protected readonly dark = signal(this.readInitialTheme());
+  protected readonly showMinimal = signal(this.readInitialHash());
 
   protected readonly active = signal(0);
   protected readonly paused = signal(false);
@@ -105,6 +108,13 @@ export class App {
 
   private startX = 0;
 
+  constructor() {
+    const destroyRef = inject(DestroyRef);
+    const onHashChange = (): void => this.showMinimal.set(window.location.hash === '#minimal');
+    window.addEventListener('hashchange', onHashChange);
+    destroyRef.onDestroy(() => window.removeEventListener('hashchange', onHashChange));
+  }
+
   protected toggleTheme(): void {
     const dark = !this.dark();
     this.dark.set(dark);
@@ -140,5 +150,9 @@ export class App {
 
   private readInitialTheme(): boolean {
     return document.documentElement.dataset['theme'] === 'dark';
+  }
+
+  private readInitialHash(): boolean {
+    return window.location.hash === '#minimal';
   }
 }

@@ -1,12 +1,18 @@
 <a class="skip" href="#intro">Skip to content</a>
 <header>
   <a class="wordmark" href="#home" aria-label="Mai Le home">ml</a>
-  <nav aria-label="Main navigation">
-    <a href="#projects">Selected work</a>
-    <a href="#interests">Off the clock</a>
-    <a href="#experience">Experience</a>
-    <a href="docs/github-live-content.md" target="_blank" rel="noopener noreferrer">Minimal site</a>
-  </nav>
+  @if (showMinimal()) {
+    <nav aria-label="Main navigation">
+      <a href="#home">Back to full site</a>
+    </nav>
+  } @else {
+    <nav aria-label="Main navigation">
+      <a href="#projects">Selected work</a>
+      <a href="#interests">Off the clock</a>
+      <a href="#experience">Experience</a>
+      <a href="#minimal">Minimal site</a>
+    </nav>
+  }
   <div class="header-actions">
     <span class="nav-note">A LITTLE LOGIC. A LITTLE SOUL.</span>
     <button
@@ -20,6 +26,9 @@
     </button>
   </div>
 </header>
+@if (showMinimal()) {
+  <app-minimal-page></app-minimal-page>
+} @else {
 <main>
   <section class="hero" id="home">
     <div class="hero-top">
@@ -349,3 +358,4 @@
   <a href="#home">BACK TO TOP</a>
   <span class="mono">© 2026 MAI LE</span>
 </footer>
+}
