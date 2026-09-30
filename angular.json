@@ -27,6 +27,11 @@
                 "glob": "**/*",
                 "input": "docs/images",
                 "output": "docs/images"
+              },
+              {
+                "glob": "github-live-content.md",
+                "input": "docs",
+                "output": "docs"
               }
             ],
             "styles": [
